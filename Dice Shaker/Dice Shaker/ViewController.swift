@@ -10,22 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var randomDice1:Int = 0
-    var randomDice2:Int = 0
-    
+    let diceImages:[String] = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
+
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
 
+    func randomiseDiceViews() {
+        diceImageView1.image = UIImage(named: diceImages[Int.random(in: 0...5)])
+        diceImageView2.image = UIImage(named: diceImages[Int.random(in: 0...5)])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        randomiseDiceViews()
     }
     
     @IBAction func rollDiceButton(_ sender: UIButton) {
         //What should happen when roll button is pressed
-        randomDice1 = Int.random(in: 0...5)
-        randomDice2 = Int.random(in: 0...5)
-        
+        randomiseDiceViews()
     }
 
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        //motionEnded is an event which is triggered when user shakes his/her phone and user stops shaking [basically when the motion ends]
+        randomiseDiceViews()
+    }
 }
 
