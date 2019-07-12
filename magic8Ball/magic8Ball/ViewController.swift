@@ -16,7 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func clickMe(_ sender: UIButton) {
+        godBallImageView.image = UIImage(named: ballImageView[Int.random(in: 0...4)])
+    }
+    
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         godBallImageView.image = UIImage(named: ballImageView[Int.random(in: 0...4)])
     }
