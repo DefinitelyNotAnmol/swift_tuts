@@ -12,6 +12,13 @@ import AVFoundation
 class ViewController: UIViewController{
     
     var player:AVAudioPlayer?
+    let note1 = Bundle.main.url(forResource: "note1", withExtension: "wav")
+    let note2 = Bundle.main.url(forResource: "note2", withExtension: "wav")
+    let note3 = Bundle.main.url(forResource: "note3", withExtension: "wav")
+    let note4 = Bundle.main.url(forResource: "note4", withExtension: "wav")
+    let note5 = Bundle.main.url(forResource: "note5", withExtension: "wav")
+    let note6 = Bundle.main.url(forResource: "note6", withExtension: "wav")
+    let note7 = Bundle.main.url(forResource: "note7", withExtension: "wav")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +36,6 @@ class ViewController: UIViewController{
     }
 
     @IBAction func notePressed(_ sender: UIButton) {
-        
-        let note1 = Bundle.main.url(forResource: "note1", withExtension: "wav")
-        let note2 = Bundle.main.url(forResource: "note2", withExtension: "wav")
-        let note3 = Bundle.main.url(forResource: "note3", withExtension: "wav")
-        let note4 = Bundle.main.url(forResource: "note4", withExtension: "wav")
-        let note5 = Bundle.main.url(forResource: "note5", withExtension: "wav")
-        let note6 = Bundle.main.url(forResource: "note6", withExtension: "wav")
-        let note7 = Bundle.main.url(forResource: "note7", withExtension: "wav")
         
         if sender.tag == 1 {
             playSound(note1!)
