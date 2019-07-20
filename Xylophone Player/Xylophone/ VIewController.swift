@@ -11,22 +11,17 @@ import AVFoundation
 
 class ViewController: UIViewController{
     
+    let soundArray : [String] = ["note1", "note2", "note3", "note4", "note5", "note6", "note7"]
     var player:AVAudioPlayer?
-    let note1 = Bundle.main.url(forResource: "note1", withExtension: "wav")
-    let note2 = Bundle.main.url(forResource: "note2", withExtension: "wav")
-    let note3 = Bundle.main.url(forResource: "note3", withExtension: "wav")
-    let note4 = Bundle.main.url(forResource: "note4", withExtension: "wav")
-    let note5 = Bundle.main.url(forResource: "note5", withExtension: "wav")
-    let note6 = Bundle.main.url(forResource: "note6", withExtension: "wav")
-    let note7 = Bundle.main.url(forResource: "note7", withExtension: "wav")
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    func playSound(_ sound:URL) {
+    func playSound(_ sound:String) {
+        let note1 = Bundle.main.url(forResource: sound, withExtension: "wav")
         do {
-            player = try AVAudioPlayer(contentsOf: sound)
+            player = try AVAudioPlayer(contentsOf: note1!)
             guard let player = player else { return }
             player.prepareToPlay()
             player.play()
@@ -37,22 +32,7 @@ class ViewController: UIViewController{
 
     @IBAction func notePressed(_ sender: UIButton) {
         
-        if sender.tag == 1 {
-            playSound(note1!)
-        } else if sender.tag == 2 {
-            playSound(note2!)
-        } else if sender.tag == 3 {
-            playSound(note3!)
-        } else if sender.tag == 4 {
-            playSound(note4!)
-        } else if sender.tag == 5 {
-            playSound(note5!)
-        } else if sender.tag == 6 {
-            playSound(note6!)
-        } else {
-            playSound(note7!)
-        }
-        
+        playSound(soundArray[sender.tag-1])
     }
 
 }
