@@ -15,34 +15,29 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet var progressBar: UIView!
     @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet var progressBar: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-
     @IBAction func answerPressed(_ sender: AnyObject) {
   
     }
     
-    
     func updateUI() {
       
     }
-    
 
     func nextQuestion() {
         
     }
     
-    
     func checkAnswer() {
         
     }
-    
     
     func startOver() {
        
