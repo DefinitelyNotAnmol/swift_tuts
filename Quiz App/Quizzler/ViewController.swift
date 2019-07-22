@@ -61,12 +61,14 @@ class ViewController: UIViewController {
     }
     
     func checkAnswer(answer:Bool) {
+        //checks the answer if it is correct
+        //if correct increase the score and update the UI
         if allQuestion.list[questionNumber].answer == answer {
             score += 1
             updateUI()
-            print("You got it")
+            ProgressHUD.showSuccess("Correct Answer")
         } else {
-            print("wrong answer")
+            ProgressHUD.showError("Wrong Answer")
         }
         
     }
