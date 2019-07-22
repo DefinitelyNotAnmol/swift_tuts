@@ -18,6 +18,4 @@ class Question {
         answer = correctAnswer
     }
     
-    
-    
 }
