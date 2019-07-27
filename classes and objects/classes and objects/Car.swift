@@ -29,17 +29,17 @@ enum CarColor {
 
 class Car {
     private var color: CarColor = .Black
-    var numberOfSeats: Int = 5
+    var numberOfDoors: Int = 5
     var type: CarType = .Sedan
     
     init() {
         
     }
     
-    convenience init(withCustomColor carColor : CarColor, andWithSeats noOfSeats : Int) {
+    convenience init(withCustomColor carColor : CarColor, andWithDoors noOfDoors : Int) {
         self.init()
         color = carColor
-        numberOfSeats = noOfSeats
+        numberOfDoors = noOfDoors
     }
     
     func printCar() {
@@ -50,6 +50,10 @@ class Car {
         }
         
         print(color)
-        print(numberOfSeats)
+        print(numberOfDoors)
+    }
+    
+    func drive() {
+        print("started driving \(color) \(type) with \(numberOfDoors)")
     }
 }

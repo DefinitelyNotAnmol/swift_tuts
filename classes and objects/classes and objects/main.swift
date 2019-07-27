@@ -9,7 +9,11 @@
 import Foundation
 
 var bmw: Car = Car()
-var mercedes : Car = Car(withCustomColor: .Silver, andWithSeats: 4)
+var mercedes : Car = Car(withCustomColor: .Silver, andWithDoors: 4)
+//
+//bmw.printCar()
+//mercedes.printCar()
+//mercedes.drive()
 
-bmw.printCar()
-mercedes.printCar()
+var tesla: Car = SelfDrivingCar(withCustomColor: .White, andWithDoors: 4)
+tesla.drive()
