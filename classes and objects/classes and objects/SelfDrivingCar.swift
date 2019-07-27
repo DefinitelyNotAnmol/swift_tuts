@@ -9,7 +9,10 @@
 import Foundation
 
 class SelfDrivingCar : Car{
+    var Destination: String = "One Infinite Loop"
+    
     override func drive() {
-        print("in a self driving car")
+        super.drive()
+        print("to \(Destination)")
     }
 }
