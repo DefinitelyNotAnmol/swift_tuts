@@ -15,5 +15,5 @@ var mercedes : Car = Car(withCustomColor: .Silver, andWithDoors: 4)
 //mercedes.printCar()
 //mercedes.drive()
 
-var tesla: Car = SelfDrivingCar(withCustomColor: .White, andWithDoors: 4)
+var tesla: SelfDrivingCar = SelfDrivingCar(withCustomColor: .White, andWithDoors: 4)
 tesla.drive()
