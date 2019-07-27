@@ -8,12 +8,10 @@
 
 import Foundation
 
-var bmw: Car = Car()
 var mercedes : Car = Car(withCustomColor: .Silver, andWithDoors: 4)
-//
-//bmw.printCar()
-//mercedes.printCar()
-//mercedes.drive()
 
-var tesla: SelfDrivingCar = SelfDrivingCar(withCustomColor: .White, andWithDoors: 4)
+mercedes.drive()
+
+var tesla: SelfDrivingCar = SelfDrivingCar(withCustomColor: .White, andWithDoors: 2)
+tesla.setDestination(destination: "One Infinite Loop")
 tesla.drive()

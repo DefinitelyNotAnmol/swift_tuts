@@ -9,10 +9,18 @@
 import Foundation
 
 class SelfDrivingCar : Car{
-    var Destination: String = "One Infinite Loop"
+    var Destination: String?
+
+    func setDestination(destination:String) {
+        Destination = destination
+    }
     
     override func drive() {
         super.drive()
-        print("to \(Destination)")
+        
+        //Optional Binding Syntax
+        if let DestinationIsSet = Destination {
+            print("to \(DestinationIsSet)")
+        }
     }
 }
