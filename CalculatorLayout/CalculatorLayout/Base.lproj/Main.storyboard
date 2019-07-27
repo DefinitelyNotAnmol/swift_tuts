@@ -125,26 +125,25 @@
                                         <rect key="frame" x="0.0" y="300" width="375" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mV-8S-9Wo">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="48"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <state key="normal" title="0"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTQ-Wb-T3j">
-                                                <rect key="frame" x="101.33333333333334" y="0.0" width="71.333333333333343" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="0"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irR-Wk-eOO">
-                                                <rect key="frame" x="202.66666666666666" y="0.0" width="70.999999999999972" height="48"/>
+                                                <rect key="frame" x="135" y="0.0" width="105" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="."/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87D-dg-yCh">
-                                                <rect key="frame" x="303.66666666666669" y="0.0" width="71.333333333333314" height="48"/>
+                                                <rect key="frame" x="270" y="0.0" width="105" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <state key="normal" title="="/>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="87D-dg-yCh" firstAttribute="width" secondItem="irR-Wk-eOO" secondAttribute="width" id="6We-hz-Jrt"/>
+                                            <constraint firstItem="irR-Wk-eOO" firstAttribute="width" secondItem="3mV-8S-9Wo" secondAttribute="width" multiplier="1:2.1" id="mWv-HR-aGu"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
