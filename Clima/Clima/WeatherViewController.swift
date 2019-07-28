@@ -36,11 +36,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             response in
             if response.result.isSuccess {
                 print("Got the weather data")
-                
                 let weatherData: JSON = JSON(response.result.value!)
                 self.updateWeatherData(weatherData: weatherData)
-                print(weatherData)
-                
             }
             
             else {
@@ -111,7 +108,9 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     //So this defination of the function userEnteredNewCityName() is the implementation of the function from
     //Protocol ChangeCityDelegate
     func userEnteredNewCityName(city: String) {
-        print(city)
+        print("Searched for \(city)")
+        let params: [String : String] = ["q" : city, "appid" : APP_ID]
+        getWeatherData(URL: WEATHER_URL, parameter: params)
     }
 
     //this function is called just before going to the next ViewController, ChangeCityViewController here in
