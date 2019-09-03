@@ -62,6 +62,6 @@ for i in 1..<5 {
 
 print()
 
-for i in 1...10 where i % 2 == 0 {
+for i in 1...10 w{
     print(i)
 }
