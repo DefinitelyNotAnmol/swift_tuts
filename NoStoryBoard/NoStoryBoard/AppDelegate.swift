@@ -21,20 +21,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainNavController = MainNavigationController()
         let secondaryViewController = SecondaryViewController()
+        let searchViewController = SearchViewController()
         mainNavController.title = "Home"
-        secondaryViewController.title = "Profile"
+        secondaryViewController.title = "Library"
+        searchViewController.title = "Search"
         
         let mainViewController = MainViewController()
         mainViewController.title = "Settings"
         
         mainNavController.viewControllers = [mainViewController]
-        
-        mainTabBarController.viewControllers = [mainNavController, secondaryViewController]
-        
+        mainTabBarController.viewControllers = [mainNavController, searchViewController, secondaryViewController]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = mainTabBarController
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 25.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        
+//        UITabBar.appearance().isTranslucent = false
+        //18 18 18
+        UITabBar.appearance().barTintColor = UIColor(red: 25.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
         
         return true
     }
