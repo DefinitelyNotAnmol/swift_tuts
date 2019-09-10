@@ -13,38 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainTabBarController = MainTabBarController()
-        
-        let mainNavController = MainNavigationController()
-        let secondaryViewController = SecondaryViewController()
-        let searchViewController = SearchViewController()
-        mainNavController.title = "Home"
-        secondaryViewController.title = "Library"
-        searchViewController.title = "Search"
-        
-        let mainViewController = MainViewController()
-        mainViewController.title = "Settings"
-        
-        mainNavController.viewControllers = [mainViewController]
-        mainTabBarController.viewControllers = [mainNavController, searchViewController, secondaryViewController]
-        
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = MainTabBarController()
         window?.makeKeyAndVisible()
-        window?.rootViewController = mainTabBarController
-        
-        UINavigationBar.appearance().barTintColor = UIColor(red: 25.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        
-//        UITabBar.appearance().isTranslucent = false
-        //18 18 18
-        UITabBar.appearance().barTintColor = UIColor(red: 25.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1.0)
-        UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
         
         return true
     }
@@ -70,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 
